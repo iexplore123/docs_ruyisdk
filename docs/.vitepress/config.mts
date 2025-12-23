@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { ImagePlugin } from './plugins/markdown/image'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -55,6 +56,31 @@ export default defineConfig({
                     collapsed: true,
                     items:[
                       {text:'Milkv Duo ：使用 riscv64-unknown-linux-musl-bin 工具链编译、运行、调试',link:'/zh/IDE/milkv-duo-ide'},
+                    ]
+                  },
+                ]
+              },
+              {
+                text:'VSCode 插件',
+                items:[
+                  {text:'功能概览',link:'/zh/VSCode-Plugins/index'},
+                  {text:'安装',link:'/zh/VSCode-Plugins/installation'},
+                  {
+                    text:'使用说明',
+                    collapsed: true,
+                    items:[
+                      {text:'管理 Ruyi 软件包',link:'/zh/VSCode-Plugins/packages'},
+                      {text:'虚拟环境',link:'/zh/VSCode-Plugins/venv'},
+                      {text:'新闻与状态栏',link:'/zh/VSCode-Plugins/news'},
+                      {text:'源码包提取',link:'/zh/VSCode-Plugins/extract'},
+                    ]
+                  },
+                  {
+                    text:'使用案例',
+                    collapsed: true,
+                    items:[
+                      {text:'构建 CoreMark（LicheePi 4A）',link:'/zh/VSCode-Plugins/cases/case1'},
+                      {text:'Milkv Duo：使用VSCode配合插件完成构建与调试',link:'/zh/VSCode-Plugins/cases/case2'},
                     ]
                   },
                 ]
